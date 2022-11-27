@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <style>
+            #loading, #results{
+                display: none;
+            }
+
+        </style>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>BMR Calculator</title>
+</head>
+<body>
+    <div class="container-sm">
+        <div class="row">
+            <div class="col-md-10 mx-auto">
+              <div class="card card-body text-left mt-5">
+                <h1 class="heading display-5 pb-3" style="text-align: center">BMR Calculator<h1>
+                    <div class="card card-body text-center mt-5">
+                        <form id="UI-form">
+                            <!--Age-->
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-text">Age (15 to 90)</span>
+                                    <input type="number" class="form-control" id="age" placeholder="Enter age..." min="1" max="99" required>
+                                </div>
+                            </div>
+                            <!--Weight-->
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-text">Weight (Kg)</span>
+                                    <input type="number" class="form-control" id="weight" placeholder="Enter weight..." min="20" max="250" step="0.1" required>
+                                </div>
+                            </div>
+                            <!--Height-->
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-text">Height (cm)</span>
+                                    <input type="number" class="form-control" id="height" placeholder="Enter height..." min="45" max="250" required>
+                                </div>
+                            </div>
+                            <!--Gender-->
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-text">Gender</span>
+                                    <select type="option" class="form-control" id="gender"> 
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!--Activity level-->
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-text">Activity</span>
+                                    <select type="option" class="form-control" id="activity">
+                                        <option value="Sedentary">Sedentary</option>
+                                        <option value="Lightly Active">Lightly Active</option>
+                                        <option value="Moderately Active">Moderately Active</option>
+                                        <option value="Very Active">Very Active</option>
+                                        <option value="Extra Active">Extra Active</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Calculate" class="btn btn-outline-primary btn-block">
+                            </div>
+                        </form>
+                        <!--Loader-->
+                        <div id="loading">
+                            <img src="./img/loading.gif" class="img-fluid" alt="">
+                        </div>
+                        
+                        <!--Results-->
+                        <div id="results">
+                            <h2>Results</h2>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-text">Basal Metabolic Rate (Calories/Day)</span>
+                                    <input type="number" class="form-control" id="BMR" disabled>
+                                </div>
+                        </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-text">Maintenance calories per day</span>
+                                    <input type="number" class="form-control" id="mcpd" disabled>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer style="text-align:center; padding: 5px;">
+  &copy Maliha Afsa
+</footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="assignment1.js"></script>
+</html>
